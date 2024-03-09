@@ -1,14 +1,13 @@
+package com.mycompany.app;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-import java.util.*;
-
-public class AppTest {
+public class AppTest extends TestCase {
 
     public static void test1() {
         ArrayList<Integer> list1 = new ArrayList<>();
@@ -83,7 +82,14 @@ public class AppTest {
         int param2 = 5;
 
         int result = App.performOperation(list1, list2, param1, param2);
-        int expected = ((3 + 5) + (2 + 4)) * (10 - 5);
+        int expected = ((10 + 15) + (20 + 40)) * (10 - 5);
         assertEquals(expected, result);
+    }
+    public static void main(String[] args) {
+    		test1();
+            test2();
+            test3();
+            test4();
+            test5();
     }
 }
